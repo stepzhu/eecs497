@@ -18,6 +18,7 @@
 		E38D7EE1235B69A200ADACA8 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EE0235B69A200ADACA8 /* ActivitiesViewController.swift */; };
 		E38D7EE3235B6A4E00ADACA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EE2235B6A4E00ADACA8 /* MapViewController.swift */; };
 		E38D7EE5235B6A6000ADACA8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EE4235B6A6000ADACA8 /* ChatViewController.swift */; };
+		EB621D0D2360CB0C00788620 /* cafes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB621D0C2360CB0C00788620 /* cafes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		E38D7EE0235B69A200ADACA8 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		E38D7EE2235B6A4E00ADACA8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E38D7EE4235B6A6000ADACA8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		EB621D0C2360CB0C00788620 /* cafes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				E31EB378235B547E0096509F /* Assets.xcassets */,
 				E31EB37A235B547E0096509F /* LaunchScreen.storyboard */,
 				E31EB37D235B547E0096509F /* Info.plist */,
+				EB621D0C2360CB0C00788620 /* cafes.swift */,
 			);
 			path = prototype;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB621D0D2360CB0C00788620 /* cafes.swift in Sources */,
 				E38D7EDD235B62FD00ADACA8 /* stressReliefViewController.swift in Sources */,
 				E38D7EE3235B6A4E00ADACA8 /* MapViewController.swift in Sources */,
 				E31EB374235B547D0096509F /* ViewController.swift in Sources */,
