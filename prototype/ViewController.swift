@@ -34,8 +34,16 @@ class ViewController: UIViewController {
     }
 
     func applyRoundCorner(_ object:AnyObject) {
-        object.layer.cornerRadius = object.frame.size.width / 2
-        object.layer.masksToBounds = true
+        if #available(iOS 13.0, *) {
+            object.layer.cornerRadius = object.frame.size.width / 2
+        } else {
+            // Fallback on earlier versions
+        }
+        if #available(iOS 13.0, *) {
+            object.layer.masksToBounds = true
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     // MARK: Actions
