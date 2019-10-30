@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jto-5C-ccV">
                                 <rect key="frame" x="155" y="315" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Stress Relief">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -283,6 +283,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="PPh-9j-hcP">
                                 <rect key="frame" x="23" y="265" width="376" height="463"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FHR-4y-FF0" appends="YES" id="vQ0-qr-Qxo"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -294,6 +298,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOy-wJ-Yg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="MTE-8B-ob0" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="FHR-4y-FF0">
+                    <connections>
+                        <action selector="tapFood:" destination="xai-Hf-773" id="Xhg-TK-2Ay"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="-565.17857142857144"/>
         </scene>
@@ -304,4 +313,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="ff0-Dh-WXd"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

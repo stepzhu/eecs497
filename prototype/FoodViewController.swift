@@ -39,7 +39,7 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
                 Cafe(id: "r4", title: "Cafeteria", description: "Diverse options available", featuredImage: UIImage(named: "cafeteria")!),
             ]
         }
-    }
+    } // end of Cafe class
 
     // MARK: Properties
     var imageArray = [UIImage]()
@@ -49,13 +49,25 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func backAction(_ sender: UIButton) {
          self.performSegue(withIdentifier: "backSegue", sender: self)
     }
-    //@IBOutlet weak var backButton: UIButton!
 
+    @IBAction func tapFood(_ sender: UITapGestureRecognizer) {
+         print("insde tap method")
+        print(sender)
     
+    }
     func addImagesToFoodScroll(_ images: [UIImage]) {
         for i in 0..<images.count {
+            let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapFood:")
+            singleTap.numberOfTapsRequired = 1
+            singleTap.numberOfTouchesRequired = 1
+            
+            
             let imageView = UIImageView()
             imageView.image = images[i]
+            imageView.addGestureRecognizer(singleTap)
+            imageView.isUserInteractionEnabled = true
+            
+            imageView.tag = i;
             let xPosition = UIScreen.main.bounds.width * CGFloat(i)
             imageView.frame = CGRect(x: xPosition, y: 0, width: foodScroll.frame.width, height: foodScroll.frame.height)
                 imageView.contentMode = .scaleAspectFit
@@ -65,64 +77,12 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
             }
     }
     
-    
-//    func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint) -> UIImage {
-//        let textColor = UIColor.red
-//        let textFont = UIFont(name: "Helvetica Bold", size: 30)!
-//
-//        let scale = UIScreen.main.scale
-//        UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
-//
-//        let textFontAttributes = [
-//            NSAttributedString.Key.font: textFont,
-//            NSAttributedString.Key.foregroundColor: textColor,
-//            ] as [NSAttributedString.Key : Any]
-//        image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
-//
-//        let rect = CGRect(origin: point, size: image.size)
-//        text.draw(in: rect, withAttributes: textFontAttributes)
-//
-//        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//
-//        return newImage!
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //
         imageArray = [UIImage(named:"cafeteria"), UIImage(named: "starbucks"), UIImage(named: "subway"), UIImage(named: "einstein")] as! [UIImage]
         //imageArray = Cafe.createCafes();
         // call helper function to add images to scroll
         addImagesToFoodScroll(imageArray)
-        
-        
-//        var imagesWithTextArray = [UIImage]()
-    
-//        for i in 0..<imageArray.count {
-//            let imageView = UIImageView()
-//            imageView.image = imageArray[i]
-//            let point = CGPoint.init(x: 100, y: 100)
-//            let newImageWithText = textToImage(drawText: foodOptions[i], inImage: UIImage(named: foodOptions[i])!, atPoint: point)
-//            imagesWithTextArray.append(newImageWithText);
-//        }
-        
-//         addImagesToFoodScroll(imagesWithTextArray)
-        // Do any additional setup after loading the view.
     }
- 
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
