@@ -27,9 +27,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.applyRoundCorner(stressReliefButton)
         self.applyRoundCorner(foodButton)
+        stressReliefButton.layer.cornerRadius = 48
+        foodButton.layer.cornerRadius = 48
+        activitiesButton.layer.cornerRadius = 48
+        mapButton.layer.cornerRadius = 48
+        chatButton.layer.cornerRadius = 48;
         self.applyRoundCorner(activitiesButton)
         self.applyRoundCorner(mapButton)
         self.applyRoundCorner(chatButton)
+        print("called apply round corner")
 
     }
 
