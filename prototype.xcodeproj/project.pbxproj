@@ -13,6 +13,7 @@
 		E31EB379235B547E0096509F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31EB378235B547E0096509F /* Assets.xcassets */; };
 		E31EB37C235B547E0096509F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31EB37A235B547E0096509F /* LaunchScreen.storyboard */; };
 		E31EB387235B547E0096509F /* prototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31EB386235B547E0096509F /* prototypeTests.swift */; };
+		E33390A623788F9900E5E2C9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33390A523788F9900E5E2C9 /* MenuViewController.swift */; };
 		E38D7EDD235B62FD00ADACA8 /* stressReliefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EDC235B62FD00ADACA8 /* stressReliefViewController.swift */; };
 		E38D7EDF235B672700ADACA8 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EDE235B672700ADACA8 /* FoodViewController.swift */; };
 		E38D7EE1235B69A200ADACA8 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EE0235B69A200ADACA8 /* ActivitiesViewController.swift */; };
@@ -42,6 +43,7 @@
 		E31EB382235B547E0096509F /* prototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31EB386235B547E0096509F /* prototypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prototypeTests.swift; sourceTree = "<group>"; };
 		E31EB388235B547E0096509F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E33390A523788F9900E5E2C9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E38D7EDC235B62FD00ADACA8 /* stressReliefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stressReliefViewController.swift; sourceTree = "<group>"; };
 		E38D7EDE235B672700ADACA8 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		E38D7EE0235B69A200ADACA8 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				E38D7EE4235B6A6000ADACA8 /* ChatViewController.swift */,
 				E38D7EE0235B69A200ADACA8 /* ActivitiesViewController.swift */,
 				E38D7EE2235B6A4E00ADACA8 /* MapViewController.swift */,
+				E33390A523788F9900E5E2C9 /* MenuViewController.swift */,
 				E38D7EDE235B672700ADACA8 /* FoodViewController.swift */,
 				E31EB378235B547E0096509F /* Assets.xcassets */,
 				E31EB37A235B547E0096509F /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 				E38D7EDD235B62FD00ADACA8 /* stressReliefViewController.swift in Sources */,
 				E38D7EE3235B6A4E00ADACA8 /* MapViewController.swift in Sources */,
 				E31EB374235B547D0096509F /* ViewController.swift in Sources */,
+				E33390A623788F9900E5E2C9 /* MenuViewController.swift in Sources */,
 				E38D7EE5235B6A6000ADACA8 /* ChatViewController.swift in Sources */,
 				E38D7EE1235B69A200ADACA8 /* ActivitiesViewController.swift in Sources */,
 				E38D7EDF235B672700ADACA8 /* FoodViewController.swift in Sources */,
