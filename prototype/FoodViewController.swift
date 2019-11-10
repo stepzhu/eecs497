@@ -50,14 +50,37 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
          self.performSegue(withIdentifier: "backSegue", sender: self)
     }
 
-    @IBAction func tapFood(_ sender: UITapGestureRecognizer) {
-         print("insde tap method")
+    @IBAction func tapFood0(_ sender: UITapGestureRecognizer) {
+         print("\ninsde FIRST tap method\n")
+        self.performSegue(withIdentifier: "menuSegue", sender: self)
         print(sender)
-    
     }
+    
+    @IBAction func tapFood1(_ sender: UITapGestureRecognizer) {
+        print("insde SECOND tap method")
+        self.performSegue(withIdentifier: "menuSegue", sender: self)
+
+        print(sender)
+    }
+    
+    @IBAction func tapFood2(_ sender: UITapGestureRecognizer) {
+        print("insde THIRD tap method")
+        self.performSegue(withIdentifier: "menuSegue", sender: self)
+
+        print(sender)
+    }
+    @IBAction func tapFood3(_ sender: UITapGestureRecognizer) {
+        print("insde FOURTH tap method")
+        self.performSegue(withIdentifier: "menuSegue", sender: self)
+
+        print(sender)
+    }
+    
     func addImagesToFoodScroll(_ images: [UIImage]) {
         for i in 0..<images.count {
-            let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapFood:")
+            let imageTap = "tapFood" + String(i) + ":"
+            
+            let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector((imageTap)))
             singleTap.numberOfTapsRequired = 1
             singleTap.numberOfTouchesRequired = 1
             
