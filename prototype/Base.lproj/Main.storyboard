@@ -307,7 +307,7 @@ Friends</string>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backAction:" destination="MTE-8B-ob0" eventType="touchUpInside" id="oQe-W1-gKq"/>
-                                    <segue destination="xai-Hf-773" kind="showDetail" id="TsB-i4-Xux"/>
+                                    <segue destination="xai-Hf-773" kind="showDetail" identifier="backSegue" id="TsB-i4-Xux"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -318,6 +318,34 @@ Friends</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Lk-bU-DJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="-1231.4732142857142"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Nrx-1K-p2W">
+            <objects>
+                <tableViewController id="yT6-Fy-B04" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DP7-ap-uuK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PYd-2K-udX">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PYd-2K-udX" id="MHG-pw-0rb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yT6-Fy-B04" id="hUt-jW-ggg"/>
+                            <outlet property="delegate" destination="yT6-Fy-B04" id="hyZ-xC-ICG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqp-pP-cN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971" y="-1165"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ACI-av-5aM">
@@ -477,6 +505,7 @@ Friends</string>
                     </view>
                     <connections>
                         <outlet property="foodScroll" destination="PPh-9j-hcP" id="nPd-y7-xe2"/>
+                        <segue destination="h4Q-Of-hJn" kind="showDetail" identifier="menuSegue" id="Y9s-Cr-w5Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOy-wJ-Yg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -487,7 +516,7 @@ Friends</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="937.68115942028987" y="-565.17857142857144"/>
+            <point key="canvasLocation" x="906" y="-520"/>
         </scene>
     </scenes>
     <resources>

@@ -72,8 +72,32 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func tapFood3(_ sender: UITapGestureRecognizer) {
         print("insde FOURTH tap method")
         self.performSegue(withIdentifier: "menuSegue", sender: self)
-
+        
         print(sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let senderLocal = sender
+        if case let senderLocal = UITapGestureRecognizer() {
+//            let senderUI = (UITapGestureRecognizer) sender
+            if (segue.identifier == "menuSegue") {
+                let secondViewController = segue.destination as! MenuViewController
+                let restaurant = senderLocal.view!.restorationIdentifier
+                
+                if (restaurant == "0") {
+                    secondViewController.restaurant = "Gateway"
+                } else if (restaurant == "1") {
+                    secondViewController.restaurant = "Starbucks"
+                }else if (restaurant == "2") {
+                    secondViewController.restaurant = "Subway"
+                }else if (restaurant == "3") {
+                    secondViewController.restaurant = "Einstein"
+                }
+            }
+        } else {
+             // do nothing
+        }
+        
     }
     
     func addImagesToFoodScroll(_ images: [UIImage]) {
@@ -83,7 +107,7 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
             let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector((imageTap)))
             singleTap.numberOfTapsRequired = 1
             singleTap.numberOfTouchesRequired = 1
-            
+            singleTap.view!.restorationIdentifier = String(i)
             
             let imageView = UIImageView()
             imageView.image = images[i]

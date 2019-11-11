@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    var restaurant:String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +18,7 @@ class MenuViewController: UIViewController {
     @IBAction func backAction(_ sender: Any) {
         self.performSegue(withIdentifier: "backToFoodMainSegue", sender: self)
     }
-    
+    //over
     
 
     /*
