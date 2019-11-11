@@ -9,17 +9,18 @@
 import UIKit
 
 class ActivitiesViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
+    @IBOutlet weak var eventsYoungKidsButton: UIButton!
     
-
+    @IBOutlet weak var eventsOlderKidsButton: UIButton!
     @IBAction func backAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "backSegue", sender: self)
+    }
+    
+    @IBAction func clickEventsYoungKidsButton(_ sender: UIButton) {
+        // go to new view
+        print("Button events pressed")
+        self.performSegue(withIdentifier: "showYoungKidsEvents", sender: self)
     }
     /*
     // MARK: - Navigation

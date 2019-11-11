@@ -52,26 +52,56 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
 
     @IBAction func tapFood0(_ sender: UITapGestureRecognizer) {
          print("\ninsde FIRST tap method\n")
-        self.performSegue(withIdentifier: "menuSegue", sender: self)
+        
+        let newViewController = UIViewController()
+        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "gateway") as! UIViewController
+        
+        self.present(vc, animated: true, completion: nil)
+//        self.performSegue(withIdentifier: "menuSegue", sender: self)
         print(sender)
     }
     
     @IBAction func tapFood1(_ sender: UITapGestureRecognizer) {
         print("insde SECOND tap method")
-        self.performSegue(withIdentifier: "menuSegue", sender: self)
+        let newViewController = UIViewController()
+        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "starbucks") as! UIViewController
+        
+        self.present(vc, animated: true, completion: nil)
+        
+//        self.performSegue(withIdentifier: "menuSegue", sender: self)
 
         print(sender)
     }
     
     @IBAction func tapFood2(_ sender: UITapGestureRecognizer) {
         print("insde THIRD tap method")
-        self.performSegue(withIdentifier: "menuSegue", sender: self)
+        let newViewController = UIViewController()
+        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "subway") as! UIViewController
+        
+        self.present(vc, animated: true, completion: nil)
 
         print(sender)
     }
     @IBAction func tapFood3(_ sender: UITapGestureRecognizer) {
         print("insde FOURTH tap method")
-        self.performSegue(withIdentifier: "menuSegue", sender: self)
+        let newViewController = UIViewController()
+        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "einstein") as! UIViewController
+        
+        self.present(vc, animated: true, completion: nil)
+        
+        //self.performSegue(withIdentifier: "menuSegue", sender: self)
         
         print(sender)
     }
@@ -107,7 +137,7 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
             let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector((imageTap)))
             singleTap.numberOfTapsRequired = 1
             singleTap.numberOfTouchesRequired = 1
-            singleTap.view!.restorationIdentifier = String(i)
+//            singleTap.view!.restorationIdentifier = String(i)
             
             let imageView = UIImageView()
             imageView.image = images[i]
