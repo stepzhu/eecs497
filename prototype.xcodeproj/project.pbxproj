@@ -19,6 +19,7 @@
 		E38D7EE1235B69A200ADACA8 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EE0235B69A200ADACA8 /* ActivitiesViewController.swift */; };
 		E38D7EE3235B6A4E00ADACA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EE2235B6A4E00ADACA8 /* MapViewController.swift */; };
 		E38D7EE5235B6A6000ADACA8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EE4235B6A6000ADACA8 /* ChatViewController.swift */; };
+		E3AE3421237B6F1F00FF2B2D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE3420237B6F1F00FF2B2D /* MealTableViewCell.swift */; };
 		E3DAB8762379F301001BAE4C /* youngEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB8752379F301001BAE4C /* youngEventsViewController.swift */; };
 		E3DAB8782379F9AB001BAE4C /* StarbucksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB8772379F9AB001BAE4C /* StarbucksViewController.swift */; };
 		E3DAB87A2379FD6E001BAE4C /* GetawayFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB8792379FD6E001BAE4C /* GetawayFoodViewController.swift */; };
@@ -54,6 +55,7 @@
 		E38D7EE0235B69A200ADACA8 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		E38D7EE2235B6A4E00ADACA8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E38D7EE4235B6A6000ADACA8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		E3AE3420237B6F1F00FF2B2D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		E3DAB8752379F301001BAE4C /* youngEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youngEventsViewController.swift; sourceTree = "<group>"; };
 		E3DAB8772379F9AB001BAE4C /* StarbucksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksViewController.swift; sourceTree = "<group>"; };
 		E3DAB8792379FD6E001BAE4C /* GetawayFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetawayFoodViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				E31EB373235B547D0096509F /* ViewController.swift */,
 				E38D7EDC235B62FD00ADACA8 /* stressReliefViewController.swift */,
 				E31EB375235B547D0096509F /* Main.storyboard */,
+				E3AE3420237B6F1F00FF2B2D /* MealTableViewCell.swift */,
 				E3DAB8752379F301001BAE4C /* youngEventsViewController.swift */,
 				E38D7EE4235B6A6000ADACA8 /* ChatViewController.swift */,
 				E38D7EE0235B69A200ADACA8 /* ActivitiesViewController.swift */,
@@ -247,6 +250,7 @@
 				E38D7EE1235B69A200ADACA8 /* ActivitiesViewController.swift in Sources */,
 				E38D7EDF235B672700ADACA8 /* FoodViewController.swift in Sources */,
 				E31EB372235B547D0096509F /* AppDelegate.swift in Sources */,
+				E3AE3421237B6F1F00FF2B2D /* MealTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
