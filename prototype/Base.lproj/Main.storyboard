@@ -368,11 +368,16 @@ Friends</string>
         <!--Einstein View Controller-->
         <scene sceneID="jnG-bz-ZRg">
             <objects>
-                <tableViewController storyboardIdentifier="einstein" id="7WC-88-4wR" customClass="EinsteinViewController" customModule="prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHM-x2-czx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="einstein" extendedLayoutIncludesOpaqueBars="YES" id="7WC-88-4wR" customClass="EinsteinViewController" customModule="prototype" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="57" sectionFooterHeight="28" id="72u-2x-wTt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="aaB-TN-Zs2">
+                            <rect key="frame" x="0.0" y="207" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCellEinstein" rowHeight="150" id="HIJ-Sg-Jn5" customClass="MealTableViewCellEinstein" customModule="prototype" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="57" width="414" height="150"/>
@@ -413,8 +418,10 @@ Friends</string>
                             <outlet property="delegate" destination="7WC-88-4wR" id="UWj-NU-i0v"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YHM-x2-czx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2089.8550724637685" y="-1907.8125"/>
         </scene>
@@ -642,7 +649,7 @@ Friends</string>
         <!--Food View Controller-->
         <scene sceneID="6yj-n8-Ax6">
             <objects>
-                <viewController id="xai-Hf-773" customClass="FoodViewController" customModule="prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="foodView" id="xai-Hf-773" customClass="FoodViewController" customModule="prototype" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TD9-0c-N3I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -729,8 +736,9 @@ Friends</string>
         <image name="floor2" width="345" height="285.5"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Y9s-Cr-w5Y"/>
         <segue reference="TsB-i4-Xux"/>
-        <segue reference="XIK-6n-PFs"/>
+        <segue reference="ff0-Dh-WXd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
