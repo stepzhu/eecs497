@@ -11,23 +11,21 @@ import Foundation
 
 struct Subway {
     let name:String?
-    let jobTitle:String?
     let country:String?
 }
 class SubwayAPI {
-    static func getSubs() -> [Subway]{
-        let Subs = [
-            Subway(name: "Kelly Goodwin", jobTitle: "Designer", country: "bo"),
-            Subway(name: "Mohammad Hussain", jobTitle: "SEO Specialist", country: "be"),
-            Subway(name: "John Young", jobTitle: "Interactive Designer", country: "af"),
-            Subway(name: "Tamilarasi Mohan", jobTitle: "Architect", country: "al"),
-            Subway(name: "Kim Yu", jobTitle: "Economist", country: "br"),
-            Subway(name: "Derek Fowler", jobTitle: "Web Strategist", country: "ar"),
-            Subway(name: "Shreya Nithin", jobTitle: "Product Designer", country: "az"),
-            Subway(name: "Emily Adams", jobTitle: "Editor", country: "bo"),
-            Subway(name: "Aabidah Amal", jobTitle: "Creative Director", country: "au"),
+    static func getSubways() -> [Subway]{
+        let Subways = [
+            Subway(name: "Sub of the Day", country: "bo"),
+            Subway(name: "More Sandwiches", country: "be"),
+            Subway(name: "Local Favorites", country: "af"),
+            Subway(name: "Fresh Fit Choices", country: "al"),
+            Subway(name: "Simple $6 Menu", country: "br"),
+            Subway(name: "Soups", country: "az"),
+            Subway(name: "Breakfast", country: "bo"),
+            Subway(name: "Sides and Drinks", country: "au5"),
         ]
-        return Subs
+        return Subways
     }
 }
 class SubwayTableViewCell: UITableViewCell {
@@ -38,9 +36,6 @@ class SubwayTableViewCell: UITableViewCell {
             if let name = SubwayItem.name {
                 profileImageView.image = UIImage(named: name)
                 nameLabel.text = name
-            }
-            if let jobTitle = SubwayItem.jobTitle {
-                jobTitleDetailedLabel.text = " \(jobTitle) "
             }
             
             if let country = SubwayItem.country {
@@ -137,8 +132,8 @@ class SubwayTableViewCell: UITableViewCell {
 
 class SubwayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private let Subs = SubwayAPI.getSubs() // model
-    let SubsTableView = UITableView() // view
+    private let Subways = SubwayAPI.getSubways() // model
+    let SubwaysTableView = UITableView() // view
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -146,26 +141,25 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
         
         view.backgroundColor = .white
         
-        view.addSubview(SubsTableView)
+        view.addSubview(SubwaysTableView)
         
-        SubsTableView.translatesAutoresizingMaskIntoConstraints = false
+        SubwaysTableView.translatesAutoresizingMaskIntoConstraints = false
         
-        SubsTableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
-        SubsTableView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
-        SubsTableView.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
-        SubsTableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        SubwaysTableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
+        SubwaysTableView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        SubwaysTableView.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        SubwaysTableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
-        SubsTableView.dataSource = self
-        SubsTableView.delegate = self
+        SubwaysTableView.dataSource = self
+        SubwaysTableView.delegate = self
         
-        
-        //      SubsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "SubwayCell")
-        SubsTableView.register(SubwayTableViewCell.self, forCellReuseIdentifier: "SubwayCell")
-        
+        SubwaysTableView.contentInset = UIEdgeInsets(top: 45, left: 0, bottom: 0, right: 0)
+        SubwaysTableView.register(SubwayTableViewCell.self, forCellReuseIdentifier: "SubwayCell")
         
         
         
-        navigationItem.title = "Subs"
+        
+        navigationItem.title = "Subways"
         
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         button.setTitle("Back", for: .normal)
@@ -180,15 +174,15 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
         dismiss(animated: true, completion: nil)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Subs.count
+        return Subways.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //      let cell = tableView.dequeueReusableCell(withIdentifier: "SubwayCell", for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubwayCell", for: indexPath) as! SubwayTableViewCell
         
-        //      cell.textLabel?.text = Subs[indexPath.row].name
-        cell.Subway = Subs[indexPath.row]
+        //      cell.textLabel?.text = Subways[indexPath.row].name
+        cell.Subway = Subways[indexPath.row]
         
         return cell
     }
