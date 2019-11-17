@@ -7,51 +7,196 @@
 //
 
 import UIKit
+import Foundation
 
-class SubwayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+struct Subway {
+    let name:String?
+    let jobTitle:String?
+    let country:String?
+}
+class SubwayAPI {
+    static func getSubs() -> [Subway]{
+        let Subs = [
+            Subway(name: "Kelly Goodwin", jobTitle: "Designer", country: "bo"),
+            Subway(name: "Mohammad Hussain", jobTitle: "SEO Specialist", country: "be"),
+            Subway(name: "John Young", jobTitle: "Interactive Designer", country: "af"),
+            Subway(name: "Tamilarasi Mohan", jobTitle: "Architect", country: "al"),
+            Subway(name: "Kim Yu", jobTitle: "Economist", country: "br"),
+            Subway(name: "Derek Fowler", jobTitle: "Web Strategist", country: "ar"),
+            Subway(name: "Shreya Nithin", jobTitle: "Product Designer", country: "az"),
+            Subway(name: "Emily Adams", jobTitle: "Editor", country: "bo"),
+            Subway(name: "Aabidah Amal", jobTitle: "Creative Director", country: "au"),
+        ]
+        return Subs
+    }
+}
+class SubwayTableViewCell: UITableViewCell {
+    
+    var Subway:Subway? {
+        didSet {
+            guard let SubwayItem = Subway else {return}
+            if let name = SubwayItem.name {
+                profileImageView.image = UIImage(named: name)
+                nameLabel.text = name
+            }
+            if let jobTitle = SubwayItem.jobTitle {
+                jobTitleDetailedLabel.text = " \(jobTitle) "
+            }
+            
+            if let country = SubwayItem.country {
+                countryImageView.image = UIImage(named: country)
+            }
+        }
+    }
+    
+    let containerView:UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.clipsToBounds = true // this will make sure its children do not go out of the boundary
+        return view
+    }()
+    
+    let profileImageView:UIImageView = {
+        let img = UIImageView()
+        img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
+        img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
+        img.layer.cornerRadius = 35
+        img.clipsToBounds = true
+        return img
+    }()
+    
+    let nameLabel:UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let jobTitleDetailedLabel:UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textColor =  .white
+        label.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        label.layer.cornerRadius = 5
+        label.clipsToBounds = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let countryImageView:UIImageView = {
+        let img = UIImageView()
+        img.contentMode = .scaleAspectFill // without this your image will shrink and looks ugly
+        img.translatesAutoresizingMaskIntoConstraints = false
+        img.layer.cornerRadius = 13
+        img.clipsToBounds = true
+        return img
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.contentView.addSubview(profileImageView)
+        containerView.addSubview(nameLabel)
+        containerView.addSubview(jobTitleDetailedLabel)
+        self.contentView.addSubview(containerView)
+        self.contentView.addSubview(countryImageView)
+        
+        profileImageView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
+        profileImageView.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant:10).isActive = true
+        profileImageView.widthAnchor.constraint(equalToConstant:70).isActive = true
+        profileImageView.heightAnchor.constraint(equalToConstant:70).isActive = true
+        
+        containerView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
+        containerView.leadingAnchor.constraint(equalTo:self.profileImageView.trailingAnchor, constant:10).isActive = true
+        containerView.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor, constant:-10).isActive = true
+        containerView.heightAnchor.constraint(equalToConstant:40).isActive = true
+        
+        nameLabel.topAnchor.constraint(equalTo:self.containerView.topAnchor).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
+        nameLabel.trailingAnchor.constraint(equalTo:self.containerView.trailingAnchor).isActive = true
+        
+        jobTitleDetailedLabel.topAnchor.constraint(equalTo:self.nameLabel.bottomAnchor).isActive = true
+        jobTitleDetailedLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
+        jobTitleDetailedLabel.topAnchor.constraint(equalTo:self.nameLabel.bottomAnchor).isActive = true
+        jobTitleDetailedLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
+        
+        countryImageView.widthAnchor.constraint(equalToConstant:26).isActive = true
+        countryImageView.heightAnchor.constraint(equalToConstant:26).isActive = true
+        countryImageView.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor, constant:-20).isActive = true
+        countryImageView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        
+        super.init(coder: aDecoder)
+    }
+    
+}
 
-    private let myArray: NSArray = ["First","Second","Third"]
-    private var myTableView: UITableView!
 
+class SubwayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    private let Subs = SubwayAPI.getSubs() // model
+    let SubsTableView = UITableView() // view
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
-        let displayWidth: CGFloat = self.view.frame.width
-        let displayHeight: CGFloat = self.view.frame.height
-        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-        myTableView.dataSource = self
-        myTableView.delegate = self
-        myTableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
-        self.view.addSubview(myTableView)
         
         
+        
+        view.backgroundColor = .white
+        
+        view.addSubview(SubsTableView)
+        
+        SubsTableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        SubsTableView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor).isActive = true
+        SubsTableView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        SubsTableView.rightAnchor.constraint(equalTo:view.safeAreaLayoutGuide.rightAnchor).isActive = true
+        SubsTableView.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
+        SubsTableView.dataSource = self
+        SubsTableView.delegate = self
+        
+        
+        //      SubsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "SubwayCell")
+        SubsTableView.register(SubwayTableViewCell.self, forCellReuseIdentifier: "SubwayCell")
+        
+        
+        
+        
+        navigationItem.title = "Subs"
         
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        
         button.setTitle("Back", for: .normal)
         button.setTitleColor(UIColor(red: 0.0, green: 122.0/255.0, blue: 1, alpha: 1.0), for: [])
         button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
         button.center = CGPoint(x: 42, y: 63)
         self.view.addSubview(button)
     }
+    
+    
     @objc func backAction() -> Void {
         dismiss(animated: true, completion: nil)
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Num: \(indexPath.row)")
-        print("Value: \(myArray[indexPath.row])")
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myArray.count
+        return Subs.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-        cell.textLabel!.text = "\(myArray[indexPath.row])"
+        //      let cell = tableView.dequeueReusableCell(withIdentifier: "SubwayCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SubwayCell", for: indexPath) as! SubwayTableViewCell
+        
+        //      cell.textLabel?.text = Subs[indexPath.row].name
+        cell.Subway = Subs[indexPath.row]
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    
+    
 }
-
