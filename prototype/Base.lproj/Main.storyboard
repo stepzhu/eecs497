@@ -332,10 +332,10 @@ Friends</string>
             </objects>
             <point key="canvasLocation" x="-1002.8985507246377" y="-624.10714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Subway View Controller-->
         <scene sceneID="SKc-A2-yVE">
             <objects>
-                <viewController storyboardIdentifier="subway" id="UxU-px-P2s" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="subway" id="UxU-px-P2s" customClass="SubwayViewController" customModule="prototype" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VKh-Dc-RQC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,15 +347,6 @@ Friends</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feo-nX-5qE" customClass="backToFoodMainSegue">
-                                <rect key="frame" x="32" y="44" width="46" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backAction:" destination="MTE-8B-ob0" eventType="touchUpInside" id="2vL-sm-SHp"/>
-                                    <segue destination="xai-Hf-773" kind="showDetail" identifier="backToFoodSegue" id="m0O-d6-WaC"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SDN-lx-icG"/>
@@ -709,7 +700,8 @@ Friends</string>
         <image name="floor2" width="345" height="285.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ELa-Cl-SJS"/>
+        <segue reference="JMp-QO-jTQ"/>
+        <segue reference="b9e-gn-scZ"/>
         <segue reference="FKU-gh-Xwa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

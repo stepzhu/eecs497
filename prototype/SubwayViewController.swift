@@ -15,21 +15,25 @@ class SubwayViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
-//        let displayWidth: CGFloat = self.view.frame.width
-//        let displayHeight: CGFloat = self.view.frame.height
-//
-//        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
-//        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-//        myTableView.dataSource = self
-//        myTableView.delegate = self
-//        self.view.addSubview(myTableView)
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        button.backgroundColor = .green
-        button.setTitle("Test Button", for: .normal)
-        button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
 
+        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+        let displayWidth: CGFloat = self.view.frame.width
+        let displayHeight: CGFloat = self.view.frame.height
+        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        myTableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        self.view.addSubview(myTableView)
+        
+        
+        
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        
+        button.setTitle("Back", for: .normal)
+        button.setTitleColor(UIColor(red: 0.0, green: 122.0/255.0, blue: 1, alpha: 1.0), for: [])
+        button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
+        button.center = CGPoint(x: 42, y: 63)
         self.view.addSubview(button)
     }
     @objc func backAction() -> Void {
