@@ -29,8 +29,28 @@ class MealTableViewCell: UITableViewCell {
     }
     
     //MARK: Private Methods
+   
+}
+
+class MealTableViewCell2: UITableViewCell {
+     // Mark properties
     
- 
+    @IBOutlet weak var FoodImageStarbucks: UIImageView!
     
+    @IBOutlet weak var FoodLabelStarbucks: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+    
+    //MARK: Private Methods
    
 }
