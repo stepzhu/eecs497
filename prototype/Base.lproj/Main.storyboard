@@ -645,7 +645,7 @@
         <!--Food View Controller-->
         <scene sceneID="6yj-n8-Ax6">
             <objects>
-                <viewController id="xai-Hf-773" customClass="FoodViewController" customModule="prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="foodView" id="xai-Hf-773" customClass="FoodViewController" customModule="prototype" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TD9-0c-N3I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -26,6 +26,7 @@
 		E3DAB87C2379FD81001BAE4C /* SubwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB87B2379FD81001BAE4C /* SubwayViewController.swift */; };
 		E3DAB87E2379FD8E001BAE4C /* EinsteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB87D2379FD8E001BAE4C /* EinsteinViewController.swift */; };
 		EB621D0D2360CB0C00788620 /* cafes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB621D0C2360CB0C00788620 /* cafes.swift */; };
+		EB812AF92381B1190081CCE2 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812AF82381B1190081CCE2 /* iOSDevCenters+GIF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		E3DAB87B2379FD81001BAE4C /* SubwayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayViewController.swift; sourceTree = "<group>"; };
 		E3DAB87D2379FD8E001BAE4C /* EinsteinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EinsteinViewController.swift; sourceTree = "<group>"; };
 		EB621D0C2360CB0C00788620 /* cafes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafes.swift; sourceTree = "<group>"; };
+		EB812AF82381B1190081CCE2 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				E31EB37A235B547E0096509F /* LaunchScreen.storyboard */,
 				E31EB37D235B547E0096509F /* Info.plist */,
 				EB621D0C2360CB0C00788620 /* cafes.swift */,
+				EB812AF82381B1190081CCE2 /* iOSDevCenters+GIF.swift */,
 			);
 			path = prototype;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				E3DAB87E2379FD8E001BAE4C /* EinsteinViewController.swift in Sources */,
 				E33390A623788F9900E5E2C9 /* MenuViewController.swift in Sources */,
 				E38D7EE5235B6A6000ADACA8 /* ChatViewController.swift in Sources */,
+				EB812AF92381B1190081CCE2 /* iOSDevCenters+GIF.swift in Sources */,
 				E3DAB87C2379FD81001BAE4C /* SubwayViewController.swift in Sources */,
 				E38D7EE1235B69A200ADACA8 /* ActivitiesViewController.swift in Sources */,
 				E38D7EDF235B672700ADACA8 /* FoodViewController.swift in Sources */,
@@ -413,12 +417,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6YRQFD3KT4;
 				INFOPLIST_FILE = prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.edu.izzyk.prototype;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.juliapag.prototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,12 +435,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6YRQFD3KT4;
 				INFOPLIST_FILE = prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.edu.izzyk.prototype;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.umich.juliapag.prototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

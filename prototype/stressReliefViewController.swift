@@ -16,7 +16,11 @@ class stressReliefViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let breatheGif = UIImage.gifImageWithName("breathe")
+        let imageView = UIImageView(image: breatheGif)
+        imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
+        self.view.addSubview(imageView)
+        print("WTFFFFF")
         // Do any additional setup after loading the view.
     }
     
