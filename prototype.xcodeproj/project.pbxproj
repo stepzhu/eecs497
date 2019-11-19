@@ -27,6 +27,7 @@
 		E3DAB87E2379FD8E001BAE4C /* EinsteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB87D2379FD8E001BAE4C /* EinsteinViewController.swift */; };
 		EB621D0D2360CB0C00788620 /* cafes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB621D0C2360CB0C00788620 /* cafes.swift */; };
 		EB812AF92381B1190081CCE2 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812AF82381B1190081CCE2 /* iOSDevCenters+GIF.swift */; };
+		EB9066542383771D00DB9759 /* oldEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9066532383771C00DB9759 /* oldEventsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		E3DAB87D2379FD8E001BAE4C /* EinsteinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EinsteinViewController.swift; sourceTree = "<group>"; };
 		EB621D0C2360CB0C00788620 /* cafes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafes.swift; sourceTree = "<group>"; };
 		EB812AF82381B1190081CCE2 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		EB9066532383771C00DB9759 /* oldEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldEventsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				E31EB37D235B547E0096509F /* Info.plist */,
 				EB621D0C2360CB0C00788620 /* cafes.swift */,
 				EB812AF82381B1190081CCE2 /* iOSDevCenters+GIF.swift */,
+				EB9066532383771C00DB9759 /* oldEventsViewController.swift */,
 			);
 			path = prototype;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				EB621D0D2360CB0C00788620 /* cafes.swift in Sources */,
 				E38D7EDD235B62FD00ADACA8 /* stressReliefViewController.swift in Sources */,
 				E3DAB8782379F9AB001BAE4C /* StarbucksViewController.swift in Sources */,
+				EB9066542383771D00DB9759 /* oldEventsViewController.swift in Sources */,
 				E3DAB87A2379FD6E001BAE4C /* GetawayFoodViewController.swift in Sources */,
 				E38D7EE3235B6A4E00ADACA8 /* MapViewController.swift in Sources */,
 				E31EB374235B547D0096509F /* ViewController.swift in Sources */,

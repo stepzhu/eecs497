@@ -20,7 +20,13 @@ class ActivitiesViewController: UIViewController {
     @IBAction func clickEventsYoungKidsButton(_ sender: UIButton) {
         // go to new view
         print("Button events pressed")
-        self.performSegue(withIdentifier: "showYoungKidsEvents", sender: self)
+        self.performSegue(withIdentifier: "youngEvents", sender: self)
+    }
+    
+    @IBAction func clickEventsOldKidsButton(_ sender: UIButton) {
+        // go to new view
+        print("Button events pressed")
+        self.performSegue(withIdentifier: "oldEvents", sender: self)
     }
     /*
     // MARK: - Navigation

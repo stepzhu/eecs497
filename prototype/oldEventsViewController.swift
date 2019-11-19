@@ -1,14 +1,14 @@
 //
-//  youngEventsViewController.swift
+//  oldEventsViewController.swift
 //  prototype
 //
-//  Created by Izzy Koningstein on 11/11/19.
+//  Created by Julia Pagnucco on 11/18/19.
 //  Copyright © 2019 Izzy Koningstein. All rights reserved.
 //
 
 import UIKit
 
-class youngEventsViewController : UITableViewController {
+class oldEventsViewController: UITableViewController {
     var mealImages = [UIImage]()
     var mealNames = [String]()
     
@@ -37,6 +37,7 @@ class youngEventsViewController : UITableViewController {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
         // the default direction is right
         view.addGestureRecognizer(rightSwipe)
+        
         // Load the sample data.
         loadEvents()
     }
@@ -67,18 +68,20 @@ class youngEventsViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "YoungTable"
+        let cellIdentifier = "OldTable"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? YoungTable  else {
-            fatalError("The dequeued cell is not an instance of YoungTable.")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? OldTable  else {
+            fatalError("The dequeued cell is not an instance of OldTable.")
         }
         
         // Fetches the appropriate meal for the data source layout.
         let meal = mealImages[indexPath.row]
         // Configure the cell...
-        cell.YImage.image = meal
-        cell.YLabel.text = mealNames[indexPath.row]
+        // print("Curr meal is: ",mealNames[indexPath.row])
+//        cell.foodLabel.text = mealNames[indexPath.row]
+//        cell.imageFood.image = meal
+        cell.oldImage.image = meal
+        cell.oldLabel.text = mealNames[indexPath.row]
         return cell
     }
 }
-

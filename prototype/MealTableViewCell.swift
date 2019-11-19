@@ -77,9 +77,45 @@ class MealTableViewCellEinstein: UITableViewCell {
     }
     
     //MARK: Private Methods
-    
-    
-    
-    
 }
 
+class YoungTable: UITableViewCell {
+    // Mark properties
+    
+    @IBOutlet weak var YImage: UIImageView!
+    
+    @IBOutlet weak var YLabel: UILabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+    //MARK: Private Methods
+}
+
+
+
+class OldTable: UITableViewCell {
+    // Mark properties
+
+    @IBOutlet weak var oldLabel: UILabel!
+    @IBOutlet weak var oldImage: UIImageView!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
+    }
+    
+    //MARK: Private Methods
+}
