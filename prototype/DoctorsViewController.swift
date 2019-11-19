@@ -15,7 +15,7 @@ class DoctorsViewController: UITableViewController {
     
     private func loadSampleDoctors() {
         
-        doctorNames += ["James Brown", "Samantha Greene", "Noa Smith", "Derek Miller", "Rina Patel", "Meredith Wilson", "Bisma Syed", "Greg Johnson"]
+        doctorNames += ["James Brown", "Samantha Grey", "Noa Smith", "Derek Miller", "Rina Patel", "Meredith Wilson", "Bisma Syed", "Greg Johnson"]
         ageRange += ["Ages: 8-10", "Ages: 8-10", "Ages: 10-12", "Ages: 13-15", "Ages: 13-15", "Ages: 13-15", "Ages: 16-18", "Ages: 16-18"]
         
     }
@@ -55,7 +55,7 @@ class DoctorsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "DoctorsTableViewCellEinstein"
+        let cellIdentifier = "DoctorsTableViewCell"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? DoctorsTableViewCell  else {
             fatalError("The dequeued cell is not an instance of DoctorTableViewCell.")
