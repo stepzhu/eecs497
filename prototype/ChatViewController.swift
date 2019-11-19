@@ -14,9 +14,38 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width:150, height: 150))
+        button.setTitle("Facebook", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+        button.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: [])
+        button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
+        button.center = view.center
+        button.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1, alpha: 1.0)
+        self.view.addSubview(button)
+        
+    }
+    func tryURL(urls: [String]) {
+        let application = UIApplication.shared
+        for url in urls {
+            if application.canOpenURL(URL(string: url)!) {
+                if #available(iOS 10.0, *) {
+                    application.open(URL(string: url)!, options: [:], completionHandler: nil)
+                }
+                else {
+                    application.openURL(URL(string: url)!)
+                }
+                return
+            }
+        }
+    }
+    @objc func buttonAction(sender: UIButton!) {
+//        var instagramHooks =
+//        var instagramUrl = NSURL(string: instagramHooks)
+        tryURL(urls: ["https://www.facebook.com/groups/399249621018106/"])
     }
     
-
+    
+    
     @IBAction func backAction(_ sender: Any) {
         self.performSegue(withIdentifier: "backSegue", sender: self)
     }
