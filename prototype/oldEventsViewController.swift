@@ -13,13 +13,13 @@ class oldEventsViewController: UITableViewController {
     var mealNames = [String]()
     
     private func loadEvents() {
-        guard let photo1 = UIImage(named: "coffee1") else { fatalError("error") }
-        guard let photo2 = UIImage(named: "coffee2") else { fatalError("error") }
-        guard let photo3 = UIImage(named: "coffee3") else { fatalError("error") }
-        guard let photo4 = UIImage(named: "coffee4") else { fatalError("error") }
-        guard let photo5 = UIImage(named: "coffee5") else { fatalError("error") }
-        guard let photo6 = UIImage(named: "chai") else { fatalError("error") }
-        guard let photo7 = UIImage(named: "tea1") else { fatalError("error") }
+        guard let photo1 = UIImage(named: "videogame") else { fatalError("error") }
+        guard let photo2 = UIImage(named: "icecreamsocial") else { fatalError("error") }
+        guard let photo3 = UIImage(named: "football") else { fatalError("error") }
+        guard let photo4 = UIImage(named: "music") else { fatalError("error") }
+        guard let photo5 = UIImage(named: "bake") else { fatalError("error") }
+        guard let photo6 = UIImage(named: "journal") else { fatalError("error") }
+        guard let photo7 = UIImage(named: "art") else { fatalError("error") }
         
         mealImages.append(photo1)
         mealImages.append(photo2)
@@ -29,7 +29,9 @@ class oldEventsViewController: UITableViewController {
         mealImages.append(photo6)
         mealImages.append(photo7)
 
-        mealNames += ["Latte", "Coffee with Milk", "Iced Coffee", "Coffee with Whipped Cream", "Caramel Macchiato", "Chai", "Green Tea"]
+        mealNames += ["Mondays 6pm - 8pm: Videogame Night!", "Tuesdays 1pm - 3pm: Ice Cream Social",
+                             "Wednesdays 6pm - 8pm: Meet and Greet with Athletes", "Thursdays 3pm - 6pm: Music Class",
+                             "Fridays 10am - 12pm: Baking Class", "Saturdays 1pm - 3pm: Journaling", "Sundays 4pm - 7pm: Art Class"]
     }
     
     override func viewDidLoad() {

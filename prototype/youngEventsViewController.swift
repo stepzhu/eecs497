@@ -9,27 +9,29 @@
 import UIKit
 
 class youngEventsViewController : UITableViewController {
-    var mealImages = [UIImage]()
-    var mealNames = [String]()
+    var eventImages = [UIImage]()
+    var eventNames = [String]()
     
     private func loadEvents() {
-        guard let photo1 = UIImage(named: "coffee1") else { fatalError("error") }
-        guard let photo2 = UIImage(named: "coffee2") else { fatalError("error") }
-        guard let photo3 = UIImage(named: "coffee3") else { fatalError("error") }
-        guard let photo4 = UIImage(named: "coffee4") else { fatalError("error") }
-        guard let photo5 = UIImage(named: "coffee5") else { fatalError("error") }
-        guard let photo6 = UIImage(named: "chai") else { fatalError("error") }
-        guard let photo7 = UIImage(named: "tea1") else { fatalError("error") }
+        guard let photo1 = UIImage(named: "younggames") else { fatalError("error") }
+        guard let photo2 = UIImage(named: "youngtutor") else { fatalError("error") }
+        guard let photo3 = UIImage(named: "movie") else { fatalError("error") }
+        guard let photo4 = UIImage(named: "youngtherapy") else { fatalError("error") }
+        guard let photo5 = UIImage(named: "art") else { fatalError("error") }
+        guard let photo6 = UIImage(named: "music") else { fatalError("error") }
+        guard let photo7 = UIImage(named: "youngtutor") else { fatalError("error") }
         
-        mealImages.append(photo1)
-        mealImages.append(photo2)
-        mealImages.append(photo3)
-        mealImages.append(photo4)
-        mealImages.append(photo5)
-        mealImages.append(photo6)
-        mealImages.append(photo7)
+        eventImages.append(photo1)
+        eventImages.append(photo2)
+        eventImages.append(photo3)
+        eventImages.append(photo4)
+        eventImages.append(photo5)
+        eventImages.append(photo6)
+        eventImages.append(photo7)
 
-        mealNames += ["Latte", "Coffee with Milk", "Iced Coffee", "Coffee with Whipped Cream", "Caramel Macchiato", "Chai", "Green Tea"]
+        eventNames += ["Mondays 6pm - 8pm: Game Night!", "Tuesdays 1pm - 3pm: Tutoring",
+                      "Wednesdays 6pm - 8pm: Movie Night!", "Thursdays 3pm - 6pm: Group Therapy",
+                      "Fridays 10am - 12pm: Art Class", "Saturdays 1pm - 3pm: Music Class", "Sundays 4pm - 7pm: Tutoring"]
     }
     
     override func viewDidLoad() {
@@ -63,7 +65,7 @@ class youngEventsViewController : UITableViewController {
         return 1
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mealImages.count
+        return eventImages.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,10 +76,10 @@ class youngEventsViewController : UITableViewController {
         }
         
         // Fetches the appropriate meal for the data source layout.
-        let meal = mealImages[indexPath.row]
+        let event = eventImages[indexPath.row]
         // Configure the cell...
-        cell.YImage.image = meal
-        cell.YLabel.text = mealNames[indexPath.row]
+        cell.YImage.image = event
+        cell.YLabel.text = eventNames[indexPath.row]
         return cell
     }
 }
