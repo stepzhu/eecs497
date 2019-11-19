@@ -62,8 +62,8 @@ class SubwayTableViewCell: UITableViewCell {
     
     let nameLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textColor = .black
+        label.font = UIFont(name: "Courier-Bold", size: 17)
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -72,7 +72,6 @@ class SubwayTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor =  .white
-        label.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         label.layer.cornerRadius = 5
         label.clipsToBounds = true
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +95,7 @@ class SubwayTableViewCell: UITableViewCell {
         containerView.addSubview(jobTitleDetailedLabel)
         self.contentView.addSubview(containerView)
         self.contentView.addSubview(countryImageView)
-        
+        self.backgroundColor = .darkGray
         profileImageView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
         profileImageView.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant:10).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant:70).isActive = true
