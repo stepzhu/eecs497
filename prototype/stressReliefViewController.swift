@@ -13,14 +13,12 @@ class stressReliefViewController: UIViewController {
     // MARK: Properties
     
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var breathingExercisesButton: UIButton!
+    @IBOutlet weak var doctorsButton: UIButton!
+    @IBOutlet weak var musicButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let breatheGif = UIImage.gifImageWithName("breathe")
-        let imageView = UIImageView(image: breatheGif)
-        imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
-        self.view.addSubview(imageView)
-        print("WTFFFFF")
         // Do any additional setup after loading the view.
     }
     
@@ -32,6 +30,48 @@ class stressReliefViewController: UIViewController {
     }
     
 
+    @IBAction func breatheAction(_ sender: Any) {
+        print("\ninsde breathe tap method\n")
+        
+        let newViewController = UIViewController()
+        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "breathe") as! UIViewController
+        
+        self.present(vc, animated: true, completion: nil)
+        //        self.performSegue(withIdentifier: "menuSegue", sender: self)
+        print(sender)
+    }
+    
+    @IBAction func doctorAction(_ sender: Any) {
+        print("\ninside doctor tap method\n")
+        
+        let newViewController = UIViewController()
+        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "doctors") as! UIViewController
+        
+        self.present(vc, animated: true, completion: nil)
+        //        self.performSegue(withIdentifier: "menuSegue", sender: self)
+        print(sender)
+    }
+    
+    @IBAction func musicAction(_ sender: Any) {
+        print("\ninsde music tap method\n")
+        
+        let newViewController = UIViewController()
+        
+        self.navigationController?.pushViewController(newViewController, animated: true)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "music") as! UIViewController
+        
+        self.present(vc, animated: true, completion: nil)
+        //        self.performSegue(withIdentifier: "menuSegue", sender: self)
+        print(sender)
+    }
+    
     /*
     // MARK: - Navigation
 
