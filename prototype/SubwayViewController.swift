@@ -136,8 +136,7 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+        SubwaysTableView.rowHeight = 150
         view.backgroundColor = .white
         
         view.addSubview(SubwaysTableView)

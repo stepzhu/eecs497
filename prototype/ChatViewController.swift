@@ -16,16 +16,16 @@ class ChatViewController: UIViewController {
         // Do any additional setup after loading the view.
         let button = UIButton(frame: CGRect(x: 100, y: 100, width:150, height: 150))
         button.setTitle("Facebook", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Courier-Bold", size: 17)
+        button.titleLabel?.font = UIFont(name: "Courier-Bold", size: 24)
         button.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: [])
         button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
-        button.center = CGPoint(x: self.view.center.x, y: 500)
+        button.center = CGPoint(x: self.view.center.x, y: 600)
         button.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1, alpha: 1.0)
         self.view.addSubview(button)
         
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-        label.font = UIFont(name: "Courier-Bold", size: 17)
-        label.center = CGPoint(x: self.view.center.x, y: 300)
+        label.font = UIFont(name: "Courier", size: 24)
+        label.center = CGPoint(x: self.view.center.x, y: 350)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 10
         label.textAlignment = NSTextAlignment.center;
