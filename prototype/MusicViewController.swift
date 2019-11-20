@@ -14,15 +14,15 @@ class MusicViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width:150, height: 150))
-        button.setTitle("Spotify", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
-        button.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: [])
-        button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
-        button.center = view.center
-        button.backgroundColor = UIColor(red: 0.0, green: 1, blue: 0, alpha: 1.0)
-        self.view.addSubview(button)
-        
+        // let button = UIButton(frame: CGRect(x: 100, y: 100, width:150, height: 150))
+        // button.setTitle("Spotify", for: .normal)
+//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+//        button.setTitleColor(UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: [])
+//        button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
+//        button.center = view.center
+//        button.backgroundColor = UIColor(red: 0.0, green: 1, blue: 0, alpha: 1.0)
+//        self.view.addSubview(button)
+        tryURL(urls: ["https://open.spotify.com/playlist/6gCC8kozvUlLGTzl2YO2MR"])
     }
     func tryURL(urls: [String]) {
         let application = UIApplication.shared
@@ -38,16 +38,16 @@ class MusicViewController: UIViewController {
             }
         }
     }
-    @objc func buttonAction(sender: UIButton!) {
-        //        var instagramHooks =
-        //        var instagramUrl = NSURL(string: instagramHooks)
-        tryURL(urls: ["https://open.spotify.com/playlist/6gCC8kozvUlLGTzl2YO2MR"])
-    }
+//    @objc func buttonAction(sender: UIButton!) {
+//        //        var instagramHooks =
+//        //        var instagramUrl = NSURL(string: instagramHooks)
+//        tryURL(urls: ["https://open.spotify.com/playlist/6gCC8kozvUlLGTzl2YO2MR"])
+//    }
     
     
     
     @IBAction func backAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "backSegue", sender: self)
+        self.performSegue(withIdentifier: "backToStressRelief", sender: self)
     }
 
     /*

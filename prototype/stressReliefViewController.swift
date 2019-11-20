@@ -61,17 +61,32 @@ class stressReliefViewController: UIViewController {
     @IBAction func musicAction(_ sender: Any) {
         print("\ninsde music tap method\n")
         
-        let newViewController = UIViewController()
+//        let newViewController = UIViewController()
+//        
+//        self.navigationController?.pushViewController(newViewController, animated: true)
+//        
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "music") as! UIViewController
+//        
+//        self.present(vc, animated: true, completion: nil)
+//        //        self.performSegue(withIdentifier: "menuSegue", sender: self)
+//        print(sender)
         
-        self.navigationController?.pushViewController(newViewController, animated: true)
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "music") as! UIViewController
-        
-        self.present(vc, animated: true, completion: nil)
-        //        self.performSegue(withIdentifier: "menuSegue", sender: self)
-        print(sender)
+        tryURL(urls: ["https://open.spotify.com/playlist/6gCC8kozvUlLGTzl2YO2MR"])
     }
-    
+    func tryURL(urls: [String]) {
+        let application = UIApplication.shared
+        for url in urls {
+            if application.canOpenURL(URL(string: url)!) {
+                if #available(iOS 10.0, *) {
+                    application.open(URL(string: url)!, options: [:], completionHandler: nil)
+                }
+                else {
+                    application.openURL(URL(string: url)!)
+                }
+                return
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

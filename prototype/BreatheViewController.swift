@@ -45,6 +45,7 @@ class BreatheViewController: UIViewController {
             default:
                 break
             }
+            performSegue(withIdentifier: "backToStressRelief", sender: self)
         }
     }
 }
