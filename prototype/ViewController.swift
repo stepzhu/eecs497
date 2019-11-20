@@ -22,19 +22,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var chatButton: UIButton!
     
+    @IBOutlet weak var SettingsButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.applyRoundCorner(stressReliefButton)
-        self.applyRoundCorner(foodButton)
-        stressReliefButton.layer.cornerRadius = 48
-        foodButton.layer.cornerRadius = 48
-        activitiesButton.layer.cornerRadius = 48
-        mapButton.layer.cornerRadius = 48
-        chatButton.layer.cornerRadius = 48;
+        stressReliefButton.layer.cornerRadius = 75
+        foodButton.layer.cornerRadius = 75
+        activitiesButton.layer.cornerRadius = 75
+        mapButton.layer.cornerRadius = 75
+        chatButton.layer.cornerRadius = 75;
+        SettingsButton.layer.cornerRadius = 75;
         self.applyRoundCorner(activitiesButton)
         self.applyRoundCorner(mapButton)
         self.applyRoundCorner(chatButton)
+        self.applyRoundCorner(SettingsButton)
+        self.applyRoundCorner(stressReliefButton)
+        self.applyRoundCorner(foodButton)
         print("called apply round corner")
 
     }
