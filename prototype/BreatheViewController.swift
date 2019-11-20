@@ -16,6 +16,7 @@ class BreatheViewController: UIViewController {
     
     @IBOutlet weak var breatheInstructions: UILabel!
     override func viewDidLoad() {
+        print("LOADING BREATHE VIEW!")
         super.viewDidLoad()
         //        let breatheGif = UIImage.gifImageWithName("breathe")
         let imageView = UIImageView()
@@ -26,12 +27,17 @@ class BreatheViewController: UIViewController {
                                  width: self.view.frame.size.width - 40,
                                  height: 300.0)
         self.view.addSubview(imageView)
-        print("WTFFFFF")
+//        print("WTFFFFF")
         breatheInstructions.lineBreakMode = NSLineBreakMode.byWordWrapping
         breatheInstructions.numberOfLines = 0
+        
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+        // the default direction is right
+        view.addGestureRecognizer(rightSwipe)
         // Do any additional setup after loading the view.
     }
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        print("IN HANDLE SWIPE!")
         if sender.state == .ended {
             switch sender.direction {
             case .right:
@@ -43,9 +49,10 @@ class BreatheViewController: UIViewController {
                 
                 self.present(vc, animated: true, completion: nil)
             default:
+                print("SWIPING!")
                 break
             }
-            performSegue(withIdentifier: "backToStressRelief", sender: self)
+//            performSegue(withIdentifier: "backToStressRelief", sender: self)
         }
     }
 }

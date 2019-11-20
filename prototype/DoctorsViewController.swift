@@ -30,6 +30,7 @@ class DoctorsViewController: UITableViewController {
     }
     
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        print("SWIPING!")
         if sender.state == .ended {
             switch sender.direction {
             case .right:
