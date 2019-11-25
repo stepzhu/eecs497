@@ -19,13 +19,26 @@ class MapViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
         
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        let colorPickerView = UIColor(white: 1.0, alpha: 1.0)
+        pickerView.setValue(colorPickerView, forKey: "textColor")
         return floors.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let colorPickerView = UIColor(white: 1.0, alpha: 1.0)
+        pickerView.setValue(colorPickerView, forKey: "textColor")
         return floors[row]
     }
+    
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let colorPickerView = UIColor(white: 1.0, alpha: 1.0)
+
+        return NSAttributedString(string: String(floors[row]), attributes: [NSAttributedString.Key.foregroundColor:colorPickerView])
+    }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let colorPickerView = UIColor(white: 1.0, alpha: 1.0)
+        pickerView.setValue(colorPickerView, forKey: "textColor")
         if row == 0 {
             // Floor 2
             MapImage.image = UIImage(named:"floor2")
@@ -61,12 +74,21 @@ class MapViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
     override func viewDidLoad() {
+        
+        let colorPickerView = UIColor(white: 1.0, alpha: 1.0)
+        pickerView.setValue(colorPickerView, forKey: "textColor")
+        pickerView.reloadAllComponents()
         super.viewDidLoad()
-            
+        
         pickerView.delegate = self
         pickerView.dataSource = self
+       
+        print("map view did load")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+         pickerView.reloadAllComponents()
+    }
     @IBAction func backAction(_ sender: Any) {
         self.performSegue(withIdentifier: "backSegue", sender: self)
     }

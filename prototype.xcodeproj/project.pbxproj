@@ -27,11 +27,13 @@
 		E38D7EE5235B6A6000ADACA8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7EE4235B6A6000ADACA8 /* ChatViewController.swift */; };
 		E39E20D12384A95100B114FD /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39E20D02384A95100B114FD /* MusicViewController.swift */; };
 		E3AE3421237B6F1F00FF2B2D /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE3420237B6F1F00FF2B2D /* MealTableViewCell.swift */; };
+		E3B72DAB238B53CA005E5437 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B72DAA238B53CA005E5437 /* SettingsViewController.swift */; };
 		E3DAB8762379F301001BAE4C /* youngEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB8752379F301001BAE4C /* youngEventsViewController.swift */; };
 		E3DAB8782379F9AB001BAE4C /* StarbucksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB8772379F9AB001BAE4C /* StarbucksViewController.swift */; };
 		E3DAB87A2379FD6E001BAE4C /* GetawayFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB8792379FD6E001BAE4C /* GetawayFoodViewController.swift */; };
 		E3DAB87C2379FD81001BAE4C /* SubwayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB87B2379FD81001BAE4C /* SubwayViewController.swift */; };
 		E3DAB87E2379FD8E001BAE4C /* EinsteinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DAB87D2379FD8E001BAE4C /* EinsteinViewController.swift */; };
+		E3F49546238B5CC400C8B8A7 /* OrderFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F49545238B5CC400C8B8A7 /* OrderFoodViewController.swift */; };
 		EB621D0D2360CB0C00788620 /* cafes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB621D0C2360CB0C00788620 /* cafes.swift */; };
 		EB812AF92381B1190081CCE2 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB812AF82381B1190081CCE2 /* iOSDevCenters+GIF.swift */; };
 		EB9066542383771D00DB9759 /* oldEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9066532383771C00DB9759 /* oldEventsViewController.swift */; };
@@ -72,11 +74,13 @@
 		E38D7EE4235B6A6000ADACA8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E39E20D02384A95100B114FD /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		E3AE3420237B6F1F00FF2B2D /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		E3B72DAA238B53CA005E5437 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E3DAB8752379F301001BAE4C /* youngEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youngEventsViewController.swift; sourceTree = "<group>"; };
 		E3DAB8772379F9AB001BAE4C /* StarbucksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksViewController.swift; sourceTree = "<group>"; };
 		E3DAB8792379FD6E001BAE4C /* GetawayFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetawayFoodViewController.swift; sourceTree = "<group>"; };
 		E3DAB87B2379FD81001BAE4C /* SubwayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayViewController.swift; sourceTree = "<group>"; };
 		E3DAB87D2379FD8E001BAE4C /* EinsteinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EinsteinViewController.swift; sourceTree = "<group>"; };
+		E3F49545238B5CC400C8B8A7 /* OrderFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFoodViewController.swift; sourceTree = "<group>"; };
 		E7AB71C0902C5DDE338B57D9 /* Pods-prototypeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prototypeTests.debug.xcconfig"; path = "Target Support Files/Pods-prototypeTests/Pods-prototypeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E91F5DE61CD2467A812CDCBC /* Pods_prototypeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_prototypeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB621D0C2360CB0C00788620 /* cafes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafes.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				E31EB373235B547D0096509F /* ViewController.swift */,
 				E38D7EDC235B62FD00ADACA8 /* stressReliefViewController.swift */,
 				E31EB375235B547D0096509F /* Main.storyboard */,
+				E3B72DAA238B53CA005E5437 /* SettingsViewController.swift */,
 				E39E20D02384A95100B114FD /* MusicViewController.swift */,
 				E32AF2902384A07700E5096A /* DoctorsTableViewCell.swift */,
 				E32AF28E23849E9D00E5096A /* DoctorsViewController.swift */,
@@ -163,6 +168,7 @@
 				E38D7EE2235B6A4E00ADACA8 /* MapViewController.swift */,
 				E33390A523788F9900E5E2C9 /* MenuViewController.swift */,
 				E38D7EDE235B672700ADACA8 /* FoodViewController.swift */,
+				E3F49545238B5CC400C8B8A7 /* OrderFoodViewController.swift */,
 				E3DAB8772379F9AB001BAE4C /* StarbucksViewController.swift */,
 				E3DAB8792379FD6E001BAE4C /* GetawayFoodViewController.swift */,
 				E3DAB87B2379FD81001BAE4C /* SubwayViewController.swift */,
@@ -369,7 +375,9 @@
 				E3DAB8762379F301001BAE4C /* youngEventsViewController.swift in Sources */,
 				E3DAB87E2379FD8E001BAE4C /* EinsteinViewController.swift in Sources */,
 				E33390A623788F9900E5E2C9 /* MenuViewController.swift in Sources */,
+				E3F49546238B5CC400C8B8A7 /* OrderFoodViewController.swift in Sources */,
 				E38D7EE5235B6A6000ADACA8 /* ChatViewController.swift in Sources */,
+				E3B72DAB238B53CA005E5437 /* SettingsViewController.swift in Sources */,
 				EB812AF92381B1190081CCE2 /* iOSDevCenters+GIF.swift in Sources */,
 				E3DAB87C2379FD81001BAE4C /* SubwayViewController.swift in Sources */,
 				E39E20D12384A95100B114FD /* MusicViewController.swift in Sources */,

@@ -13,6 +13,7 @@ import SwiftGifOrigin
 class BreatheViewController: UIViewController {
     
     //@IBOutlet weak var label: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var breatheInstructions: UILabel!
     override func viewDidLoad() {
@@ -35,6 +36,11 @@ class BreatheViewController: UIViewController {
         // the default direction is right
         view.addGestureRecognizer(rightSwipe)
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func backAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "backToStressRelief", sender: self)
     }
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
         print("IN HANDLE SWIPE!")

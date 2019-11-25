@@ -178,6 +178,7 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //      let cell = tableView.dequeueReusableCell(withIdentifier: "SubwayCell", for: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubwayCell", for: indexPath) as! SubwayTableViewCell
+        cell.isUserInteractionEnabled = false
         
         //      cell.textLabel?.text = Subways[indexPath.row].name
         cell.Subway = Subways[indexPath.row]
