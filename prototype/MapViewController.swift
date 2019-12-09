@@ -42,35 +42,70 @@ class MapViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         if row == 0 {
             // Floor 2
             MapImage.image = UIImage(named:"floor2")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
         if row == 1 {
             // Floor 3
             MapImage.image = UIImage(named: "floor3")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
         if row == 2 {
             MapImage.image = UIImage(named: "floor4")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
         if row == 3 {
             MapImage.image = UIImage(named: "floor5")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
         if row == 4 {
             MapImage.image = UIImage(named: "floor6")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
         if row == 5 {
             MapImage.image = UIImage(named: "floor7")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
         if row == 6 {
             MapImage.image = UIImage(named: "floor8")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
         if row == 7 {
             MapImage.image = UIImage(named: "floor10")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
         if row == 8 {
             MapImage.image = UIImage(named: "floor11")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
         if row == 9 {
             MapImage.image = UIImage(named: "floor12")
+            MapImage.isUserInteractionEnabled = true
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(self.pinchGestureFunc))
+            MapImage.addGestureRecognizer(pinchGesture)
         }
+    }
+    
+    @objc func pinchGestureFunc(sender:UIPinchGestureRecognizer) {
+        sender.view?.transform = ((sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale))!)
+        sender.scale = 1.0
     }
     
     override func viewDidLoad() {
