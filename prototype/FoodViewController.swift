@@ -37,6 +37,7 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
                 Cafe(id: "r2", title: "Einstein Bros. Bagels", description: "Bagels, Coffee, Sandwiches", featuredImage: UIImage(named: "einstein")!),
                 Cafe(id: "r3", title: "Subway", description: "Make your own sandwiches", featuredImage: UIImage(named: "subway")!),
                 Cafe(id: "r4", title: "Cafeteria", description: "Diverse options available", featuredImage: UIImage(named: "cafeteria")!),
+                Cafe(id: "r5", title: "DarkGray", description: ";)", featuredImage: UIImage(named: "DarkGray")!),
             ]
         }
     } // end of Cafe class
@@ -157,7 +158,7 @@ class FoodViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageArray = [UIImage(named:"cafeteria"), UIImage(named: "starbucks"), UIImage(named: "subway"), UIImage(named: "einstein")] as! [UIImage]
+        imageArray = [UIImage(named:"cafeteria"), UIImage(named: "starbucks"), UIImage(named: "subway"), UIImage(named: "einstein"),UIImage(named: "DarkGray")] as! [UIImage]
         //imageArray = Cafe.createCafes();
         // call helper function to add images to scroll
         addImagesToFoodScroll(imageArray)
