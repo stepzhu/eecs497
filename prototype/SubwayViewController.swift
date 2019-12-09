@@ -136,8 +136,6 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SubwaysTableView.rowHeight = 150
-        view.backgroundColor = .white
         
         view.addSubview(SubwaysTableView)
         
@@ -151,7 +149,6 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
         SubwaysTableView.dataSource = self
         SubwaysTableView.delegate = self
         
-        SubwaysTableView.contentInset = UIEdgeInsets(top: 45, left: 0, bottom: 0, right: 0)
         SubwaysTableView.register(SubwayTableViewCell.self, forCellReuseIdentifier: "SubwayCell")
         
         
@@ -161,10 +158,15 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
         
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         button.setTitle("Back", for: .normal)
-        button.setTitleColor(UIColor(red: 0.0, green: 122.0/255.0, blue: 1, alpha: 1.0), for: [])
+        button.setTitleColor(.white, for: [])
         button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
-        button.center = CGPoint(x: 42, y: 63)
+        self.SubwaysTableView.contentInset = UIEdgeInsets(top: 75, left: 0, bottom: 0, right: 0)
+        button.center = CGPoint(x: 40, y: 60)
+        button.titleLabel?.font = UIFont(name: "CourierNewPS-BoldMT", size: 20)
         self.view.addSubview(button)
+        
+        self.view.backgroundColor = .darkGray
+        SubwaysTableView.backgroundColor = .darkGray
     }
     
     
@@ -187,7 +189,7 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 150
     }
     
     
