@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrderFoodViewController: UIViewController {
+class OrderFoodViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var restaurantName: UITextField!
@@ -22,15 +22,21 @@ class OrderFoodViewController: UIViewController {
         
         orderText.attributedPlaceholder = NSAttributedString(string:"Enter food order...", attributes:[NSAttributedString.Key.foregroundColor: UIColor.white,NSAttributedString.Key.font :UIFont(name: "Courier New", size: 15)!])
         
+        orderText.delegate = self
+        restaurantName.delegate = self
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    func textFieldShouldReturn(_ orderText: UITextField) -> Bool {
+        self.view.endEditing(true)
+        orderText.resignFirstResponder()
+        return false
     }
+
+
 
     /*
     // MARK: - Navigation
