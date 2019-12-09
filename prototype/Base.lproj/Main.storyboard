@@ -918,24 +918,6 @@
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="je1-Dj-8Vu">
-                                <rect key="frame" x="20" y="23" width="68" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Back">
-                                            <attributes>
-                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="20" name="CourierNewPS-BoldMT"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="backAction:" destination="MTE-8B-ob0" eventType="touchUpInside" id="jpx-lW-gFn"/>
-                                    <segue destination="xai-Hf-773" kind="showDetail" identifier="backToFoodMain" id="b9e-gn-scZ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hL5-SO-n1A">
                                 <rect key="frame" x="96" y="58" width="252" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1202,8 +1184,6 @@
         <image name="floor2" width="345" height="285.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JMp-QO-jTQ"/>
-        <segue reference="b9e-gn-scZ"/>
         <segue reference="1HO-DH-ixt"/>
         <segue reference="FKU-gh-Xwa"/>
     </inferredMetricsTieBreakers>

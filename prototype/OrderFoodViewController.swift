@@ -27,7 +27,17 @@ class OrderFoodViewController: UIViewController, UITextFieldDelegate {
         
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        button.setTitle("Back", for: .normal)
+        button.setTitleColor(UIColor.white , for: .normal)
+        button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
+        button.center = CGPoint(x: 42, y: 63)
+        self.view.addSubview(button)
+    }
+    
+    
+    @objc func backAction() -> Void {
+        dismiss(animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ orderText: UITextField) -> Bool {
