@@ -16,14 +16,17 @@ struct Subway {
 class SubwayAPI {
     static func getSubways() -> [Subway]{
         let Subways = [
-            Subway(name: "Sub of the Day", country: "bo"),
-            Subway(name: "More Sandwiches", country: "be"),
-            Subway(name: "Local Favorites", country: "af"),
-            Subway(name: "Fresh Fit Choices", country: "al"),
-            Subway(name: "Simple $6 Menu", country: "br"),
-            Subway(name: "Soups", country: "az"),
-            Subway(name: "Breakfast", country: "bo"),
-            Subway(name: "Sides and Drinks", country: "au5"),
+            Subway(name: "Black Forest Ham", country: "bo"),
+            Subway(name: "Chicken & Bacon Ranch Melt", country: "be"),
+            Subway(name: "Italian B.M.T", country: "af"),
+            Subway(name: "Spicy Italian", country: "al"),
+            Subway(name: "Meatball Marinara", country: "br"),
+            Subway(name: "Steak & Cheese", country: "az"),
+            Subway(name: "Sweet Onion Chicken Teriyaki", country: "bo"),
+            Subway(name: "Veggie Delite", country: "au5"),
+            Subway(name: "Apple Sauce", country: "bo"),
+            Subway(name: "Chocolate Chip Cookie", country: "au5"),
+            Subway(name: "Chips", country: "au5")
         ]
         return Subways
     }
@@ -53,10 +56,7 @@ class SubwayTableViewCell: UITableViewCell {
     
     let profileImageView:UIImageView = {
         let img = UIImageView()
-        img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
         img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
-        img.layer.cornerRadius = 35
-        img.clipsToBounds = true
         return img
     }()
     
@@ -98,8 +98,8 @@ class SubwayTableViewCell: UITableViewCell {
         self.backgroundColor = .darkGray
         profileImageView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
         profileImageView.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant:10).isActive = true
-        profileImageView.widthAnchor.constraint(equalToConstant:70).isActive = true
-        profileImageView.heightAnchor.constraint(equalToConstant:70).isActive = true
+        profileImageView.widthAnchor.constraint(equalToConstant:150).isActive = true
+        profileImageView.heightAnchor.constraint(equalToConstant:150).isActive = true
         
         containerView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
         containerView.leadingAnchor.constraint(equalTo:self.profileImageView.trailingAnchor, constant:10).isActive = true
@@ -136,7 +136,7 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        SubwaysTableView.contentInset = UIEdgeInsets(top: 75, left: 0, bottom: 0, right: 0)
         view.addSubview(SubwaysTableView)
         
         SubwaysTableView.translatesAutoresizingMaskIntoConstraints = false
@@ -160,13 +160,12 @@ class SubwayViewController: UIViewController, UITableViewDataSource, UITableView
         button.setTitle("Back", for: .normal)
         button.setTitleColor(.white, for: [])
         button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
-        self.SubwaysTableView.contentInset = UIEdgeInsets(top: 75, left: 0, bottom: 0, right: 0)
         button.center = CGPoint(x: 40, y: 60)
         button.titleLabel?.font = UIFont(name: "CourierNewPS-BoldMT", size: 20)
-        self.view.addSubview(button)
-        
         self.view.backgroundColor = .darkGray
         SubwaysTableView.backgroundColor = .darkGray
+        self.view.addSubview(button)
+
     }
     
     
